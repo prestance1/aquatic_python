@@ -7,3 +7,8 @@ def test_replace_me():
     writer = io.StringIO()
     weather.process_csv(reader, writer)
     assert writer.getvalue() == "Saw 2 lines\n"
+
+def test_high():
+    reader = io.StringIO("Line One\nLine Two\n")
+    writer = io.StringIO()
+    weather.process_csv(reader, writer)
